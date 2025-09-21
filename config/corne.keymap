@@ -10,17 +10,16 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        hm: hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "hm";
             #binding-cells = <2>;
             tapping-term-ms = <275>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <200>;
-            global-quick-tap;
+            quick-tap-ms = <120>;
         };
 
         para: para {
