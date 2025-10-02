@@ -8,6 +8,11 @@
 #define ADJ 3
 #define EXTRA 4
 
+&lt {
+    tapping-term-ms = <275>;
+    quick-tap-ms = <120>;
+};
+
 / {
     behaviors {
         hm: hm {
