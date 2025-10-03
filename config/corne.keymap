@@ -121,6 +121,16 @@
             bindings = <&kp GREATER_THAN>;
             key-positions = <20 19>;
         };
+
+        Gaming {
+            bindings = <&to 4>;
+            key-positions = <12 0>;
+        };
+
+        Base {
+            bindings = <&to 0>;
+            key-positions = <12 24>;
+        };
     };
 
     //
@@ -138,10 +148,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp ESCAPE  &kp Q           &kp W           &kp E        &kp R             &kp T          &kp Y            &kp U              &kp I        &kp O            &kp P                    &trans
-&trans      &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G          &kp H            &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_WIN SEMICOLON  &kp SQT
-&trans      &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N            &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &trans
-                                            &trans       &kp TAB           &lt 2 SPACE    &lt 1 BACKSPACE  &kp ENTER          &trans
+&kp ESCAPE  &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y          &kp U              &kp I        &kp O            &kp P                    &trans
+&trans      &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H          &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_WIN SEMICOLON  &kp SQT
+&trans      &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N          &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &trans
+                                            &trans       &lt 2 TAB         &kp SPACE    &kp BACKSPACE  &lt 1 ENTER        &trans
             >;
         };
 
@@ -186,6 +196,15 @@
 &trans  &trans        &trans        &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &kp F12
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E      &kp R    &kp T        &kp Y     &kp U    &kp I      &kp O    &kp P     &trans
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp G        &kp H     &kp J    &kp K      &kp L    &kp SEMI  &trans
+&trans     &kp Z  &kp X  &kp C      &kp V    &kp B        &kp N     &kp M    &kp COMMA  &kp DOT  &trans    &trans
+                         &kp LCTRL  &kp TAB  &kp SPACE    &kp BSPC  &kp RET  &trans
             >;
         };
     };
