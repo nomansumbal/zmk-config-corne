@@ -182,10 +182,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &kp GRAVE     &kp PLUS    &kp MINUS      &kp UNDERSCORE    &kp EQUAL  &kp EXCL           &kp AT     &kp AMPERSAND  &trans  &trans
-&trans  &trans  &kp CARET     &kp DOLLAR  &kp HASH       &kp ASTERISK      &kp COLON  &kp SEMI           &kp TILDE  &kp PERCENT    &trans  &trans
-&trans  &trans  &kp QUESTION  &kp PIPE    &kp BACKSLASH  &kp SLASH         &kp APOS   &kp DOUBLE_QUOTES  &kp COMMA  &kp PERIOD     &trans  &trans
-                              &trans      &kp SPACE      &kp TAB           &kp ENTER  &kp BACKSPACE      &trans
+&trans  &trans  &kp GRAVE     &kp PLUS    &kp MINUS      &kp UNDERSCORE    &kp EQUAL      &kp EXCL           &kp AT     &kp AMPERSAND  &trans  &trans
+&trans  &trans  &kp CARET     &kp DOLLAR  &kp HASH       &kp ASTERISK      &kp COLON      &kp SEMI           &kp TILDE  &kp PERCENT    &trans  &trans
+&trans  &trans  &kp QUESTION  &kp PIPE    &kp BACKSLASH  &kp SLASH         &kp APOS       &kp DOUBLE_QUOTES  &kp COMMA  &kp PERIOD     &trans  &trans
+                              &trans      &trans         &kp SPACE         &kp BACKSPACE  &kp ENTER          &trans
             >;
         };
 
