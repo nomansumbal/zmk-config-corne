@@ -124,22 +124,22 @@
 
         Gaming {
             bindings = <&to 4>;
-            key-positions = <12 0>;
+            key-positions = <3 4 5>;
         };
 
         Base {
             bindings = <&to 0>;
-            key-positions = <12 24>;
+            key-positions = <3 4 17>;
         };
 
         bt0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <26 28>;
+            key-positions = <0 11>;
         };
 
         bt1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <26 29>;
+            key-positions = <23 12>;
         };
     };
 
