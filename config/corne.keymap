@@ -17,7 +17,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
             require-prior-idle-ms = <120>; /* tune to taste */
         };
 
@@ -67,104 +66,44 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
-
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-            layers = <0>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-            layers = <0>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-            layers = <0>;
-        };
-
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <3 15>;
-            layers = <0>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
-            layers = <0>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 14>;
-            layers = <0>;
-        };
-
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <8 20>;
-            layers = <0>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <32 20>;
-            layers = <0>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 19>;
-            layers = <0>;
-        };
-
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <31 19>;
-            layers = <0>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
-            layers = <0>;
-        };
-
-        leftbrack {
+        lft-brckt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-            layers = <0>;
+            key-positions = <2 3>;
         };
 
-        rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 32>;
-            layers = <0>;
+        rgt_brckt {
+            bindings = <&kp LC(RIGHT_BRACKET)>;
+            key-positions = <3 4>;
         };
 
-        para-less {
-            bindings = <&paraless>;
-            key-positions = <20 19>;
-            layers = <0>;
+        lft_para {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 14>;
         };
 
-        para-great {
-            bindings = <&paragreat>;
-            key-positions = <20 21>;
-            layers = <0>;
+        rgt_para {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <16 16 15>;
+        };
+
+        lft_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <27 26>;
+        };
+
+        rgt_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <28 29>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <7 8>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <8 9>;
         };
     };
 
@@ -183,10 +122,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BACKSPACE
-&none    &kp A  &kp S  &kp D  &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &none
-&none    &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                       &none  &mo 1  &kp SPACE    &kp RET  &mo 2  &none
+&kp ESC  &kp Q               &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U        &kp I             &kp O          &kp P               &kp BACKSPACE
+&none    &hm A LC(LEFT_GUI)  &hm S LEFT_ALT  &hm D LEFT_SHIFT  &hm F LCTRL  &kp G        &kp H    &hm J RCTRL  &hm K LEFT_SHIFT  &kp RIGHT_ALT  &hm SEMI RIGHT_GUI  &none
+&none    &kp Z               &kp X           &kp C             &kp V        &kp B        &kp N    &kp M        &kp COMMA         &kp DOT        &kp FSLH            &none
+                                             &none             &mo 1        &kp SPACE    &kp RET  &mo 2        &none
             >;
         };
 
@@ -200,10 +139,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &none  &none     &none         &none            &none        &none    &kp N7  &kp N8  &kp N9  &none  &none
-&none  &none  &none     &kp UP_ARROW  &none            &none        &kp N0   &kp N4  &kp N5  &kp N6  &none  &none
-&none  &none  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none        &none    &kp N1  &kp N2  &kp N3  &none  &none
-                        &kp LGUI      &none            &kp SPACE    &kp RET  &mo 3   &none
+&kp ESCAPE  &none  &none      &none         &none            &kp DELETE    &none    &kp N7  &kp N8  &kp N9  &none  &none
+&none       &none  &kp PG_UP  &kp UP_ARROW  &kp PAGE_DOWN    &none         &kp N0   &kp N4  &kp N5  &kp N6  &none  &none
+&none       &none  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &none         &none    &kp N1  &kp N2  &kp N3  &none  &none
+                              &kp LGUI      &none            &kp SPACE     &kp RET  &mo 3   &none
             >;
         };
 
@@ -217,10 +156,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &none
-&none  &none     &none   &none     &none     &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &none
-&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &none
-                         &kp LGUI  &mo 3     &kp SPACE    &kp RET    &none      &none
+&none  &none  &kp GRAVE      &kp LS(PLUS)  &kp MINUS      &kp LS(UNDER)    &kp EQUAL      &kp LS(EXCL)  &kp LS(AT)     &kp LS(AMPS)   &none  &none
+&none  &none  &kp LS(CARET)  &kp LS(DLLR)  &kp LS(POUND)  &kp LS(STAR)     &kp LS(COLON)  &kp SEMI      &kp LS(TILDE)  &kp LS(PRCNT)  &none  &none
+&none  &none  &kp LS(QMARK)  &kp LS(PIPE)  &kp BSLH       &kp FSLH         &kp SQT        &kp LS(DQT)   &kp COMMA      &kp DOT        &none  &none
+                             &kp LGUI      &mo 3          &kp SPACE        &kp RET        &none         &none
             >;
         };
 
